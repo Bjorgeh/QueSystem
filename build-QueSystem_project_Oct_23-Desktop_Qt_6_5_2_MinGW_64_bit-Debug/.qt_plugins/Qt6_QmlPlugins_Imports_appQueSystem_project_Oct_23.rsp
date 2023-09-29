@@ -1,0 +1,14 @@
+-rootPath
+C:/QueSystem/QueSystem_project_Oct_23
+-cmake-output
+-output-file
+C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.qt_plugins/Qt6_QmlPlugins_Imports_appQueSystem_project_Oct_23.cmake
+-importPath
+C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/QueSystem_project_Oct_23
+-importPath
+C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug
+-importPath
+C:/Qt/6.5.2/mingw_64/./qml
+-qrcFiles
+C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmake_QueSystem_project_Oct_23.qrc
+C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/appQueSystem_project_Oct_23_raw_qml_0.qrc

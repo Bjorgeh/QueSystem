@@ -1,0 +1,5 @@
+module QueSystem_project_Oct_23
+typeinfo appQueSystem_project_Oct_23.qmltypes
+prefer :/qt/qml/QueSystem_project_Oct_23/
+Main 1.0 Main.qml
+
