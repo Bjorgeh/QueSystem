@@ -1,6 +1,8 @@
 <RCC>
   <qresource prefix="/qt/qml/QueSystem_project_Oct_23/">
     <file alias="Main.qml">C:/QueSystem/QueSystem_project_Oct_23/Main.qml</file>
+    <file alias="middle_page.qml">C:/QueSystem/QueSystem_project_Oct_23/middle_page.qml</file>
+    <file alias="background.qml">C:/QueSystem/QueSystem_project_Oct_23/background.qml</file>
   </qresource>
 </RCC>
 
