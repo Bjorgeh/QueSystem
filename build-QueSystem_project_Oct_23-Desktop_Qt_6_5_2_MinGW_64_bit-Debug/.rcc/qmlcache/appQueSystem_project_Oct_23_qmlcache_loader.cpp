@@ -12,6 +12,20 @@ namespace _qt_qml_QueSystem_project_Oct_23_Main_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _qt_qml_QueSystem_project_Oct_23_middle_page_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::TypedFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
+namespace _qt_qml_QueSystem_project_Oct_23_background_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::TypedFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 
 }
 namespace {
@@ -27,6 +41,8 @@ Q_GLOBAL_STATIC(Registry, unitRegistry)
 
 Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/QueSystem_project_Oct_23/Main.qml"), &QmlCacheGeneratedCode::_qt_qml_QueSystem_project_Oct_23_Main_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/QueSystem_project_Oct_23/middle_page.qml"), &QmlCacheGeneratedCode::_qt_qml_QueSystem_project_Oct_23_middle_page_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/qt/qml/QueSystem_project_Oct_23/background.qml"), &QmlCacheGeneratedCode::_qt_qml_QueSystem_project_Oct_23_background_qml::unit);
     QQmlPrivate::RegisterQmlUnitCacheHook registration;
     registration.structVersion = 0;
     registration.lookupCachedQmlUnit = &lookupCachedUnit;
