@@ -32,14 +32,14 @@ Window {
                 gradient: Gradient {
                     GradientStop { position: 0.0; color: left_item_list.color }
                     GradientStop { position: 0.6; color: left_item_list.color }
-                    GradientStop { position: 1.0; color: "#7d000d" }
+                    GradientStop { position: 1.0; color: "gray" }
                 }
                 radius: 50
 
                 //Displays text centered in parent rectangle
                 Text {
                     id: ldn
-                    text: qsTr("Queued items")
+                    text: qsTr("Pågår")
                     anchors.centerIn: parent
                 }
                 //Rectangle for Queued items
@@ -49,9 +49,21 @@ Window {
                     width: left_item_list.width
                     height: left_item_list.height - left_display_name.height
                     color: left_item_list.color
-                    border.color: "darkgray"
 
-                     // left Grid with list items
+                    //variabel for hovered: true false
+                    property bool isHovered: false
+                    border.color: isHovered ? "gray" : left_item_list.color
+
+                    //Sets mousearea to the whole parent rectangle
+                    MouseArea{
+                        anchors.fill: parent
+                        hoverEnabled: true
+                        //sets variabel to true or false dependig on the mouse position
+                        onEntered: left_list.isHovered = true
+                        onExited: left_list.isHovered = false
+                    }
+
+                    // left Grid with list items
                     GridView {
                         id: leftGridView
                         anchors.fill: parent
@@ -59,27 +71,16 @@ Window {
                         anchors.topMargin: 8
                         anchors.rightMargin: 8
                         anchors.bottomMargin: 8
+
+                        //Sets one default item for test
                         model: ListModel {
                             ListElement {
                                 name: "Grey"
                                 colorCode: "grey"
                             }
-
-                            ListElement {
-                                name: "Red"
-                                colorCode: "red"
-                            }
-
-                            ListElement {
-                                name: "Blue"
-                                colorCode: "blue"
-                            }
-
-                            ListElement {
-                                name: "Green"
-                                colorCode: "green"
-                            }
                         }
+
+                        //Sets up item blueprint
                         delegate: Item {
                             x: 5
                             height: 50
@@ -87,7 +88,7 @@ Window {
                                 Rectangle {
                                     width: 50
                                     height: 30
-                                    color: "#7d000d"
+                                    color: "gray"
                                     radius: 50
                                     anchors.horizontalCenter: parent.horizontalCenter
                                     Text {
@@ -131,14 +132,14 @@ Window {
                 gradient: Gradient {
                     GradientStop { position: 0.0; color: middle_item_list.color }
                     GradientStop { position: 0.6; color: middle_item_list.color }
-                    GradientStop { position: 1.0; color: "#bced00" }
+                    GradientStop { position: 1.0; color: "yellow" }
                 }
                 radius: 50
 
                 //Displays text centered in parent rectangle
                 Text {
                     id: mdn
-                    text: qsTr("Progressing items")
+                    text: qsTr("Under bearbeidelse")
                     anchors.centerIn: parent
                 }
 
@@ -149,9 +150,21 @@ Window {
                     width: middle_item_list.width
                     height: middle_item_list.height - middle_display_name.height
                     color: middle_item_list.color
-                    border.color: "darkgray"
 
-                     // middle Grid with list items
+                    //variabel for hovered: true false
+                    property bool isHovered_middle: false
+                    border.color: isHovered_middle ? "gray" : middle_item_list.color
+
+                    //Sets mousearea to the whole parent rectangle
+                    MouseArea{
+                        anchors.fill: parent
+                        hoverEnabled: true
+                        //sets variabel to true or false dependig on the mouse position
+                        onEntered: middle_list.isHovered_middle = true
+                        onExited: middle_list.isHovered_middle = false
+                    }
+
+                    // middle Grid with list items
                     GridView {
                         id: middleGridView
                         anchors.fill: parent
@@ -159,27 +172,17 @@ Window {
                         anchors.topMargin: 8
                         anchors.rightMargin: 8
                         anchors.bottomMargin: 8
+
+                        //Sets one default item for test
                         model: ListModel {
                             ListElement {
-                                name: "Grey"
-                                colorCode: "grey"
+                                name: "Yellow"
+                                colorCode: "yellow"
                             }
 
-                            ListElement {
-                                name: "Red"
-                                colorCode: "red"
-                            }
-
-                            ListElement {
-                                name: "Blue"
-                                colorCode: "blue"
-                            }
-
-                            ListElement {
-                                name: "Green"
-                                colorCode: "green"
-                            }
                         }
+
+                        //Sets up item blueprint
                         delegate: Item {
                             x: 5
                             height: 50
@@ -187,7 +190,7 @@ Window {
                                 Rectangle {
                                     width: 50
                                     height: 30
-                                    color: "#bced00"
+                                    color: "yellow"
                                     radius: 50
                                     anchors.horizontalCenter: parent.horizontalCenter
                                     Text {
@@ -238,7 +241,7 @@ Window {
                 //Displays text centered in parent rectangle
                 Text {
                     id: rdn
-                    text: qsTr("Ready items")
+                    text: qsTr("Klar")
                     anchors.centerIn: parent
                 }
 
@@ -250,7 +253,19 @@ Window {
                     height: right_item_list.height - right_display_name.height
                     //color: background.color
                     color: "#4ec500"
-                    border.color: "darkgray"
+
+                    //variabel for hovered: true false
+                    property bool isHovered_right: false
+                    border.color: isHovered_right ? "gray" : right_item_list.color
+
+                    //Sets mousearea to the whole parent rectangle
+                    MouseArea{
+                        anchors.fill: parent
+                        hoverEnabled: true
+                        //sets variabel to true or false dependig on the mouse position
+                        onEntered: right_list.isHovered_right = true
+                        onExited: right_list.isHovered_right = false
+                    }
 
                     // right Grid with list items
                     GridView {
@@ -260,27 +275,16 @@ Window {
                         anchors.bottomMargin: 8
                         anchors.leftMargin: 8
                         anchors.topMargin: 8
+
+                        //Sets one default item for test
                         model: ListModel {
-                            ListElement {
-                                name: "Grey"
-                                colorCode: "grey"
-                            }
-
-                            ListElement {
-                                name: "Red"
-                                colorCode: "red"
-                            }
-
-                            ListElement {
-                                name: "Blue"
-                                colorCode: "blue"
-                            }
-
                             ListElement {
                                 name: "Green"
                                 colorCode: "green"
                             }
+
                         }
+                        //Sets up item blueprint
                         delegate: Item {
                             x: 5
                             height: 50
