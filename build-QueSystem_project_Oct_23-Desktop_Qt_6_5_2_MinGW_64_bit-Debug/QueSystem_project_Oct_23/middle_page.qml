@@ -83,6 +83,11 @@ Item{
                                 color: "gray"
                                 radius: 50
                                 anchors.horizontalCenter: parent.horizontalCenter
+
+                                Loader{
+                                    anchors.fill: parent
+                                    source: "left_list_popup.qml"
+                                }
                                 Text {
                                     //id: objName
                                     text: qsTr(name)
@@ -185,6 +190,11 @@ Item{
                                 color: "yellow"
                                 radius: 50
                                 anchors.horizontalCenter: parent.horizontalCenter
+
+                                Loader{
+                                    anchors.fill: parent
+                                    source: "middle_list_popup.qml"
+                                }
                                 Text {
                                     //id: objName
                                     text: qsTr(name)
@@ -271,10 +281,9 @@ Item{
                     //Sets one default item for test
                     model: ListModel {
                         ListElement {
-                            name: "Green"
+                            name: "1"
                             colorCode: "green"
                         }
-
                     }
                     //Sets up item blueprint
                     delegate: Item {
@@ -287,8 +296,9 @@ Item{
                                 color: "#37ff4a"
                                 radius: 50
                                 anchors.horizontalCenter: parent.horizontalCenter
-                                MouseArea{
-
+                                Loader{
+                                    anchors.fill: parent
+                                    source: "right_list_popup.qml"
                                 }
                                 Text {
                                     //id: objName
