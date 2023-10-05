@@ -15,6 +15,7 @@ Item {
                        console.log(index)
                    }
     }
+
     //Popup for rightGridView element edit
     Popup {
         id: popup_r
@@ -33,7 +34,12 @@ Item {
                 //button for element delition
                 Button {
                     text: "Slett"
-                    onClicked: rightGridView.model.remove(index);
+                    onClicked:{
+                        rightGridView.model.remove(index);
+                        //Updates gridnumbers
+                        updateGridNumbers(leftGridView.count,middleGridView.count,rightGridView.count)
+
+                    }
                 }
             }
         }

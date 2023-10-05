@@ -21,6 +21,7 @@ qt_add_qml_module(appQueSystem_project_Oct_23
     QML_FILES left_list_popup.qml
     QML_FILES middle_list_popup.qml
     QML_FILES right_list_popup.qml
+    QML_FILES left_page.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
