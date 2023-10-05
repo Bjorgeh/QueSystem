@@ -48,7 +48,6 @@ Item {
                                 //Does not work yet
                                 //leftGridView.model.append({name: addButton.text})
 
-                                addNewItemToLeftGrid(newItemNumber)
                                 updateGridNumbers(itemsInLeftGrid,itemsInMiddleGrid,itemsInRightGrid)
                             }
                         }
