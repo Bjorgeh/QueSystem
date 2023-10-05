@@ -37,13 +37,21 @@ Item {
                         //Adds element to rightgridview
                         rightGridView.model.append({name: middleGridView.model.get(index).name});
                         //Removes element from middleGridView
-                        middleGridView.model.remove(index);
+                        middleGridView.model.remove(index)
+                        //Updates gridnumbers
+                        updateGridNumbers(leftGridView.count,middleGridView.count,rightGridView.count)
+
                     }
                 }
                 //Removes element from middleGridView
                 Button {
                     text: "Slett"
-                    onClicked: middleGridView.model.remove(index);
+                    onClicked:{
+                        middleGridView.model.remove(index)
+                        //Updates gridnumbers
+                        updateGridNumbers(leftGridView.count,middleGridView.count,rightGridView.count)
+
+                    }
                 }
             }
         }

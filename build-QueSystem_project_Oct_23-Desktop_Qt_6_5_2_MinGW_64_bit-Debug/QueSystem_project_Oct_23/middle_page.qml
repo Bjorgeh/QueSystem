@@ -109,6 +109,9 @@ Item{
                 }
             }
         }
+        Component.onCompleted: {
+            itemsInLeftGrid = leftGridView.count
+        }
     }
 
     //Middle Item list
@@ -216,6 +219,9 @@ Item{
                 }
             }
         }
+        Component.onCompleted: {
+            itemsInMiddleGrid = middleGridView.count
+        }
     }
 
     //Right Item list
@@ -321,5 +327,8 @@ Item{
                 }
             }
         }
+    }
+    Component.onCompleted: {
+        itemsInRightGrid = rightGridView.count
     }
 }
