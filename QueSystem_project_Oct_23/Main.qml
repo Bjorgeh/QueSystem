@@ -82,11 +82,30 @@ Window {
                     }
                 }
             }
-        }
 
+        }
         //Right Page
         Item{
             id: rightPage
+            Rectangle {
+                anchors.fill: parent
+                //Loading background
+                Loader {
+                    source: "background.qml"
+                    anchors.fill: parent
+                }
+            }
         }
     }
+    //PageIndicator bottom
+    PageIndicator {
+        id: botSwipeInd
+        interactive: true
+        count: swipe.count
+        currentIndex: swipe.currentIndex
+
+        anchors.bottom: parent.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+    }
+
 }
