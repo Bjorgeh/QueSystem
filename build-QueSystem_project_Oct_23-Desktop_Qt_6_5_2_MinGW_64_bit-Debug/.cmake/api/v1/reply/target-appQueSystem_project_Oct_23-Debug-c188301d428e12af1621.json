@@ -105,13 +105,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 43,
+				"line" : 47,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 38,
+				"line" : 42,
 				"parent" : 0
 			},
 			{
@@ -662,6 +662,30 @@
 				"parent" : 69
 			},
 			{
+				"command" : 22,
+				"file" : 5,
+				"line" : 2071,
+				"parent" : 69
+			},
+			{
+				"command" : 22,
+				"file" : 5,
+				"line" : 2224,
+				"parent" : 69
+			},
+			{
+				"command" : 22,
+				"file" : 5,
+				"line" : 2071,
+				"parent" : 69
+			},
+			{
+				"command" : 22,
+				"file" : 5,
+				"line" : 2224,
+				"parent" : 69
+			},
+			{
 				"command" : 27,
 				"file" : 5,
 				"line" : 2307,
@@ -671,19 +695,19 @@
 				"command" : 26,
 				"file" : 0,
 				"line" : 314,
-				"parent" : 105
+				"parent" : 109
 			},
 			{
 				"command" : 25,
 				"file" : 0,
 				"line" : 2055,
-				"parent" : 106
+				"parent" : 110
 			},
 			{
 				"command" : 22,
 				"file" : 0,
 				"line" : 1708,
-				"parent" : 107
+				"parent" : 111
 			},
 			{
 				"command" : 29,
@@ -695,7 +719,7 @@
 				"command" : 22,
 				"file" : 0,
 				"line" : 1792,
-				"parent" : 109
+				"parent" : 113
 			}
 		]
 	},
@@ -870,7 +894,9 @@
 				15,
 				17,
 				19,
-				20
+				21,
+				23,
+				24
 			]
 		},
 		{
@@ -1042,19 +1068,19 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "appQueSystem_project_Oct_23_autogen::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 70,
 			"id" : "appQueSystem_project_Oct_23_tooling::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 77,
-			"id" : "appQueSystem_project_Oct_23_qmlimportscan::@6890427a1f51a3e7e1df"
+			"id" : "appQueSystem_project_Oct_23_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "appQueSystem_project_Oct_23_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "appQueSystem_project_Oct_23_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 77,
+			"id" : "appQueSystem_project_Oct_23_qmlimportscan::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "appQueSystem_project_Oct_23::@6890427a1f51a3e7e1df",
@@ -1206,7 +1232,9 @@
 				15,
 				17,
 				19,
-				20
+				21,
+				23,
+				24
 			]
 		},
 		{
@@ -1221,25 +1249,23 @@
 				14,
 				16,
 				18,
-				21,
+				20,
 				22,
-				37,
-				38,
-				39,
-				40,
-				41,
-				42,
-				43
+				25,
+				26,
+				43,
+				44,
+				45,
+				46,
+				47,
+				48,
+				49
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				23,
-				24,
-				25,
-				26,
 				27,
 				28,
 				29,
@@ -1249,7 +1275,13 @@
 				33,
 				34,
 				35,
-				36
+				36,
+				37,
+				38,
+				39,
+				40,
+				41,
+				42
 			]
 		}
 	],
@@ -1309,85 +1341,109 @@
 		},
 		{
 			"backtrace" : 93,
-			"path" : "middle_page.qml",
+			"path" : "background.qml",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 94,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_middle_page_qml.cpp",
+			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_background_qml.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 95,
-			"path" : "background.qml",
+			"path" : "global_functions.js",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 96,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_background_qml.cpp",
+			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_global_functions_js.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 97,
-			"path" : "left_list_popup.qml",
+			"path" : "Components/Popups/Left_list_popup.qml",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 98,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_left_list_popup_qml.cpp",
+			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/Popups/Left_list_popup_qml.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 99,
-			"path" : "middle_list_popup.qml",
+			"path" : "Components/Popups/Middle_list_popup.qml",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 100,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_middle_list_popup_qml.cpp",
+			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/Popups/Middle_list_popup_qml.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 101,
-			"path" : "right_list_popup.qml",
+			"path" : "Components/Popups/Right_list_popup.qml",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 102,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_right_list_popup_qml.cpp",
+			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/Popups/Right_list_popup_qml.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 103,
-			"path" : "left_page.qml",
+			"path" : "Components/SwipeView/Left_page.qml",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 104,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_left_page_qml.cpp",
+			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/SwipeView/Left_page_qml.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
+			"backtrace" : 105,
+			"path" : "Components/SwipeView/Middle_page.qml",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 106,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/SwipeView/Middle_page_qml.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 107,
+			"path" : "Components/SwipeView/Right_page.qml",
+			"sourceGroupIndex" : 1
+		},
+		{
 			"backtrace" : 108,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/SwipeView/Right_page_qml.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 112,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
 			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qrc_appQueSystem_project_Oct_23_raw_qml_0.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 110,
+			"backtrace" : 114,
 			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/QueSystem_project_Oct_23/qmldir",
 			"sourceGroupIndex" : 1
 		},
@@ -1430,37 +1486,49 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_middle_page_qml.cpp.rule",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 0,
-			"isGenerated" : true,
 			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_background_qml.cpp.rule",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_left_list_popup_qml.cpp.rule",
+			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_global_functions_js.cpp.rule",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_middle_list_popup_qml.cpp.rule",
+			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/Popups/Left_list_popup_qml.cpp.rule",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_right_list_popup_qml.cpp.rule",
+			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/Popups/Middle_list_popup_qml.cpp.rule",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
-			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_left_page_qml.cpp.rule",
+			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/Popups/Right_list_popup_qml.cpp.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/SwipeView/Left_page_qml.cpp.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/SwipeView/Middle_page_qml.cpp.rule",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/SwipeView/Right_page_qml.cpp.rule",
 			"sourceGroupIndex" : 2
 		},
 		{

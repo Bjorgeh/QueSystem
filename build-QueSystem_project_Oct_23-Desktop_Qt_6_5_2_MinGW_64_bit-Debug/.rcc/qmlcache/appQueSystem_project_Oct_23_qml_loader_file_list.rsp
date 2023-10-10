@@ -1,7 +1,9 @@
 /qt/qml/QueSystem_project_Oct_23/Main.qml
-/qt/qml/QueSystem_project_Oct_23/middle_page.qml
 /qt/qml/QueSystem_project_Oct_23/background.qml
-/qt/qml/QueSystem_project_Oct_23/left_list_popup.qml
-/qt/qml/QueSystem_project_Oct_23/middle_list_popup.qml
-/qt/qml/QueSystem_project_Oct_23/right_list_popup.qml
-/qt/qml/QueSystem_project_Oct_23/left_page.qml
+/qt/qml/QueSystem_project_Oct_23/global_functions.js
+/qt/qml/QueSystem_project_Oct_23/Components/Popups/Left_list_popup.qml
+/qt/qml/QueSystem_project_Oct_23/Components/Popups/Middle_list_popup.qml
+/qt/qml/QueSystem_project_Oct_23/Components/Popups/Right_list_popup.qml
+/qt/qml/QueSystem_project_Oct_23/Components/SwipeView/Left_page.qml
+/qt/qml/QueSystem_project_Oct_23/Components/SwipeView/Middle_page.qml
+/qt/qml/QueSystem_project_Oct_23/Components/SwipeView/Right_page.qml

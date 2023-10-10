@@ -976,13 +976,15 @@
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : 
 	[
+		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/Popups/Left_list_popup_qml.cpp",
+		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/Popups/Middle_list_popup_qml.cpp",
+		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/Popups/Right_list_popup_qml.cpp",
+		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/SwipeView/Left_page_qml.cpp",
+		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/SwipeView/Middle_page_qml.cpp",
+		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/SwipeView/Right_page_qml.cpp",
 		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Main_qml.cpp",
 		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_background_qml.cpp",
-		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_left_list_popup_qml.cpp",
-		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_left_page_qml.cpp",
-		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_middle_list_popup_qml.cpp",
-		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_middle_page_qml.cpp",
-		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_right_list_popup_qml.cpp",
+		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_global_functions_js.cpp",
 		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qrc_appQueSystem_project_Oct_23_raw_qml_0.cpp",
 		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qrc_qmake_QueSystem_project_Oct_23.cpp",
 		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/appquesystem_project_oct_23_qmltyperegistrations.cpp"
@@ -1008,13 +1010,15 @@
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : 
 	[
+		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/Popups/Left_list_popup_qml.cpp",
+		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/Popups/Middle_list_popup_qml.cpp",
+		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/Popups/Right_list_popup_qml.cpp",
+		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/SwipeView/Left_page_qml.cpp",
+		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/SwipeView/Middle_page_qml.cpp",
+		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Components/SwipeView/Right_page_qml.cpp",
 		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_Main_qml.cpp",
 		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_background_qml.cpp",
-		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_left_list_popup_qml.cpp",
-		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_left_page_qml.cpp",
-		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_middle_list_popup_qml.cpp",
-		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_middle_page_qml.cpp",
-		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_right_list_popup_qml.cpp",
+		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qmlcache/appQueSystem_project_Oct_23_global_functions_js.cpp",
 		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qrc_appQueSystem_project_Oct_23_raw_qml_0.cpp",
 		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/.rcc/qrc_qmake_QueSystem_project_Oct_23.cpp",
 		"C:/QueSystem/build-QueSystem_project_Oct_23-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/appquesystem_project_oct_23_qmltyperegistrations.cpp"

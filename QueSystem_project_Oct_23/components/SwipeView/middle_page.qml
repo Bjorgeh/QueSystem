@@ -1,11 +1,15 @@
 import QtQuick
 import QtQuick.Window
 import QtQuick.Controls
+import QtQml
+import "../Popups"
 
-Item{
+Page{
     id: middle_page
-    height:parent.height
-    width:parent.width
+
+//    This will crash the whole program.
+//    height:parent.height
+//    width:parent.width
 
     //Left Item list
     Rectangle{
@@ -67,7 +71,7 @@ Item{
                     //Sets one default item for test
                     model: ListModel {
                         ListElement {
-                            name: "Grey"
+                            name: "4"
                             colorCode: "grey"
                         }
                     }
@@ -84,10 +88,15 @@ Item{
                                 radius: 50
                                 anchors.horizontalCenter: parent.horizontalCenter
 
-                                Loader{
+//                                Loader{
+//                                    anchors.fill: parent
+//                                    source: "left_list_popup.qml"
+//                                }
+
+                                Left_list_popup{
                                     anchors.fill: parent
-                                    source: "left_list_popup.qml"
                                 }
+
                                 Text {
                                     //id: objName
                                     text: qsTr(name)
@@ -111,6 +120,8 @@ Item{
         }
         Component.onCompleted: {
             itemsInLeftGrid = leftGridView.count
+            console.log("inGrid: " +swipe.deletedItem)
+
         }
     }
 
@@ -176,7 +187,7 @@ Item{
                     //Sets one default item for test
                     model: ListModel {
                         ListElement {
-                            name: "Yellow"
+                            name: "3"
                             colorCode: "yellow"
                         }
 
@@ -194,9 +205,12 @@ Item{
                                 radius: 50
                                 anchors.horizontalCenter: parent.horizontalCenter
 
-                                Loader{
+//                                Loader{
+//                                    anchors.fill: parent
+//                                    source: "middle_list_popup.qml"
+//                                }
+                                Middle_list_popup{
                                     anchors.fill: parent
-                                    source: "middle_list_popup.qml"
                                 }
                                 Text {
                                     //id: objName
@@ -287,10 +301,11 @@ Item{
                     //Sets one default item for test
                     model: ListModel {
                         ListElement {
-                            name: "1"
+                            name: "2"
                             colorCode: "green"
                         }
                     }
+
                     //Sets up item blueprint
                     delegate: Item {
                         x: 5
@@ -302,9 +317,12 @@ Item{
                                 color: "#37ff4a"
                                 radius: 50
                                 anchors.horizontalCenter: parent.horizontalCenter
-                                Loader{
+//                                Loader{
+//                                    anchors.fill: parent
+//                                    source: "right_list_popup.qml"
+//                                }
+                                Right_list_popup{
                                     anchors.fill: parent
-                                    source: "right_list_popup.qml"
                                 }
                                 Text {
                                     //id: objName
