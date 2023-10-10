@@ -1,8 +1,9 @@
 import QtQuick
 import QtQuick.Window
 import QtQuick.Controls
+import QtQml
 
-Item{
+Page{
     id: middle_page
     height:parent.height
     width:parent.width
@@ -111,6 +112,8 @@ Item{
         }
         Component.onCompleted: {
             itemsInLeftGrid = leftGridView.count
+            console.log("inGrid: " +swipe.deletedItem)
+
         }
     }
 

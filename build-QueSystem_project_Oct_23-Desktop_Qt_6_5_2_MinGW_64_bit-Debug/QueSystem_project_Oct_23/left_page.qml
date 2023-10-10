@@ -1,8 +1,9 @@
 import QtQuick
 import QtQuick.Window
 import QtQuick.Controls
+import './global_functions.js' as GF
 
-Item {
+Page {
     Rectangle{
         id: leftPage
         height:parent.height
