@@ -5,7 +5,6 @@ import '../../global_functions.js' as GF
 
 Item {
 
-
     MouseArea{
         anchors.fill: parent
         onClicked: (mouse) => {
@@ -67,25 +66,17 @@ Item {
                         updateGridNumbers(leftGridView.count,middleGridView.count,rightGridView.count)
                     }
                 }
+
                 //Removes element from leftGridView
                 Button {
 
                     id: leftListDeleteButton
                     text: "Slett"
                     onClicked:{
-                        //Sets name on variable for deletion to current item
-                        console.log("Before: " + swipe.deletedItem)
-                        swipe.deletedItem = leftGridView.model.get(index).name
-                        console.log("After: " +swipe.deletedItem)
 
-                        //Adds new Item to Right page grid
-                        //swipe.itemAt(1).left_item_list.addNewItemToLeftGrid(swipe.deletedItem)
-                        //GF.addItemToGrid(swipe.deletedItem,logGridView)
-
+                        deletedItem = leftGridView.model.get(0).name
                         //Removes item from left grid
-                        //leftGridView.model.remove(index)
                         GF.removeItem(index,leftGridView)
-                        swipe.deletedItem = "None"
 
                         //Updates gridnumbers
                         updateGridNumbers(leftGridView.count,middleGridView.count,rightGridView.count)

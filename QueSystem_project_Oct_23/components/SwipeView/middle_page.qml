@@ -11,10 +11,15 @@ Page{
     //    height:parent.height
     //    width:parent.width
 
-    function addNewItemToLeftGrid(itemName){
-        leftGridView.model.append({name: itemName})
-        console.log(itemName)
+    property int leftListCount: leftGridView.count
 
+    //Adds new item to left grid view
+    function updateLeftGridView(){
+        for(let i = 0;i< newItemsList.length; i++ ){
+            GF.addItemToGrid(newItemsList[i],leftGridView)
+            console.log("Left Grid up to date.")
+        }
+        newItemsList = []
     }
 
     //Left Item list
@@ -68,6 +73,7 @@ Page{
                 // left Grid with list items
                 GridView {
                     id: leftGridView
+
                     anchors.fill: parent
                     anchors.leftMargin: 8
                     anchors.topMargin: 8
@@ -77,8 +83,8 @@ Page{
                     //Sets one default item for test
                     model: ListModel {
                         ListElement {
-                            name: "4"
-                            colorCode: "grey"
+                            name: "TEST"
+                            //colorCode: "grey"
                         }
                     }
 
@@ -126,14 +132,15 @@ Page{
         }
 
         Component.onCompleted: {
+
+            //Sletter default
+            if(leftGridView.model.get(0).name === "TEST"){
+                leftGridView.model.remove(0)
+            }
+
             itemsInLeftGrid = leftGridView.count
-            console.log("inGrid: " +swipe.deletedItem)
         }
-
-
     }
-
-
 
     //Middle Item list
     Rectangle{
@@ -197,7 +204,7 @@ Page{
                     //Sets one default item for test
                     model: ListModel {
                         ListElement {
-                            name: "3"
+                            name: "TEST"
                             colorCode: "yellow"
                         }
 
@@ -244,6 +251,13 @@ Page{
             }
         }
         Component.onCompleted: {
+
+
+            //Sletter default
+            if(middleGridView.model.get(0).name === "TEST"){
+                middleGridView.model.remove(0)
+            }
+
             itemsInMiddleGrid = middleGridView.count
         }
     }
@@ -311,7 +325,7 @@ Page{
                     //Sets one default item for test
                     model: ListModel {
                         ListElement {
-                            name: "2"
+                            name: "TEST"
                             colorCode: "green"
                         }
                     }
@@ -357,7 +371,14 @@ Page{
         }
     }
     Component.onCompleted: {
+
+        //Sletter default
+        if(rightGridView.model.get(0).name === "TEST"){
+            rightGridView.model.remove(0)
+        }
+
         itemsInRightGrid = rightGridView.count
     }
+
 }
 

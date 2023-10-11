@@ -8,3 +8,5 @@ function addItemToGrid(item,grid) {
 function removeItem(index, grid){
     grid.model.remove(index)
 }
+
+

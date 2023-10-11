@@ -48,6 +48,7 @@ Item {
                 Button {
                     text: "Slett"
                     onClicked:{
+                        deletedItem = leftGridView.model.get(0).name
                         middleGridView.model.remove(index)
                         //Updates gridnumbers
                         updateGridNumbers(leftGridView.count,middleGridView.count,rightGridView.count)
