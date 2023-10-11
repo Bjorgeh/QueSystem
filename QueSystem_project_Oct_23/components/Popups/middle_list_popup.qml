@@ -13,9 +13,10 @@ Item {
                        let posInGridView = Qt.point(mouse.x, mouse.y)
                        let posInContentItem = mapToItem(middleGridView.contentItem, posInGridView)
                        let index = middleGridView.indexAt(posInContentItem.x, posInContentItem.y)
-                       console.log(index)
+                       //console.log(index)
                    }
     }
+
     //Popup for middleGridView element edit
     Popup {
         id: popup_m
@@ -48,10 +49,17 @@ Item {
                 Button {
                     text: "Slett"
                     onClicked:{
+                        //Sets property variabel to new item name
+                        deletedItem = middleGridView.model.get(index).name
+
+                        //Removes from middle grid
                         middleGridView.model.remove(index)
+
                         //Updates gridnumbers
                         updateGridNumbers(leftGridView.count,middleGridView.count,rightGridView.count)
 
+                        //Swipes to the item log page.
+                        swipe.currentIndex = 2
                     }
                 }
             }

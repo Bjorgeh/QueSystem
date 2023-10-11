@@ -2,8 +2,17 @@ import QtQuick
 import QtQuick.Window
 import QtQuick.Controls
 import "../../global_functions.js" as GF
+import "../SwipeView" as SW
 
 Page {
+
+    //Imports the middle_page as a component with ID
+    //MAKES COPY OF MIDDLEPAGE - > WONT WORK
+//    Item{
+//        SW.Middle_page{
+//            id: mp
+//        }
+//    }
 
     Rectangle{
         //id: leftPageRec
@@ -11,12 +20,6 @@ Page {
         width:parent.width
         color: "darkblue"
 
-        //unComment for test
-        //Properties for calculation gridItems in middle_page
-//        property int gridL: parseInt(itemsInLeftGrid)
-//        property int gridM: parseInt(itemsInMiddleGrid)
-//        property int gridR: parseInt(itemsInRightGrid)
-        //property int gridSum: gridL + gridM + gridR
 
         Rectangle{
             id: buttonColumn
@@ -34,6 +37,7 @@ Page {
                         id: addLabel
                         text: "Add Nr: "
                     }
+
                     //Addbutton for new items
                         Button{
                             id: addButton
@@ -41,15 +45,17 @@ Page {
                             height: buttonColumn.height / 10
                             text: newItemNumber ? newItemNumber.toString() : "1"//leftPage.gridSum ? (leftPage.gridSum + 1).toString() : "1"
                             onClicked: {
-                                  //unComment for numbers test
-//                                console.log("Left Grid: " + leftPage.gridL)
-//                                console.log("Middle Grid: " + leftPage.gridM)
-//                                console.log("Right Grid: " + leftPage.gridR)
-//                                console.log("sum: " + leftPage.gridSum)3
 
-                                //Does not work yet
-                                //swipe.middlePage.leftGridView.model.append({name: addButton.text})
+                                //Adds added items to list
+                                newItemsList.push((newItemNumber).toString())
 
+                                //Prints list
+                                console.log("List: ")
+                                for(let i=0;i < newItemsList.length;i++){
+                                    console.log(newItemsList[i])
+                                }
+                                newItemNumber++
+                                //updates gridnumbers
                                 updateGridNumbers(itemsInLeftGrid,itemsInMiddleGrid,itemsInRightGrid)
                             }
                         }

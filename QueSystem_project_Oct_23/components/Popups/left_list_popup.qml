@@ -15,6 +15,7 @@ Item {
                        let posInContentItem = mapToItem(leftGridView.contentItem, posInGridView)
                        let index = leftGridView.indexAt(posInContentItem.x, posInContentItem.y)
                        console.log(index)
+
                    }
     }
 
@@ -49,6 +50,7 @@ Item {
                         updateGridNumbers(leftGridView.count,middleGridView.count,rightGridView.count)
                     }
                 }
+
                 //moves element to rightGridView
                 Button { text: "Flytt til 'Klar'"
                     onClicked: {
@@ -62,29 +64,27 @@ Item {
 
                         //Updates gridnumbers
                         updateGridNumbers(leftGridView.count,middleGridView.count,rightGridView.count)
-
                     }
                 }
+
                 //Removes element from leftGridView
                 Button {
+                    id: leftListDeleteButton
                     text: "Slett"
                     onClicked:{
-                        //Sets name on variable for deletion to current item
-                        console.log("Before: " + swipe.deletedItem)
-                        swipe.deletedItem = leftGridView.model.get(index).name
-                        console.log("After: " +swipe.deletedItem)
 
-                        //Adds new Item to Right page grid
-                        //swipe.itemAt(1).left_item_list.addNewItemToLeftGrid(swipe.deletedItem)
-                        //GF.addItemToGrid(swipe.deletedItem,logGridView)
 
+
+                        deletedItem = leftGridView.model.get(index).name
                         //Removes item from left grid
-                        //leftGridView.model.remove(index)
                         GF.removeItem(index,leftGridView)
-                        swipe.deletedItem = "None"
 
                         //Updates gridnumbers
                         updateGridNumbers(leftGridView.count,middleGridView.count,rightGridView.count)
+
+                        //Swipes to the item log page.
+                        swipe.currentIndex = 2
+
                     }
                 }
             }

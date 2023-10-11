@@ -36,10 +36,17 @@ Item {
                 Button {
                     text: "Slett"
                     onClicked:{
+                        //Sets property variabel to new item name
+                        deletedItem = rightGridView.model.get(index).name
+
+                        //Removes from middle grid
                         rightGridView.model.remove(index);
+
                         //Updates gridnumbers
                         updateGridNumbers(leftGridView.count,middleGridView.count,rightGridView.count)
 
+                        //Swipes to the item log page.
+                        swipe.currentIndex = 2
                     }
                 }
             }

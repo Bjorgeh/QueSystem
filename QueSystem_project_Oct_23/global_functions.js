@@ -1,3 +1,4 @@
+
 //Adds item to grid
 function addItemToGrid(item,grid) {
     grid.model.append({name: item})
@@ -7,3 +8,5 @@ function addItemToGrid(item,grid) {
 function removeItem(index, grid){
     grid.model.remove(index)
 }
+
+

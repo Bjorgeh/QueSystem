@@ -2,8 +2,20 @@ import QtQuick
 import QtQuick.Window
 import QtQuick.Controls
 import "../../global_functions.js" as GF
+import QtQml
 
 Page {
+
+    id: right_page
+
+    function addDeletedToRightPage(){
+
+        if(deletedItem.length > 0){
+            logGridView.model.append({name: deletedItem})
+            deletedItem = ""
+            swipe.currentIndex = 2
+        }
+    }
 
     Rectangle{
         anchors.fill: parent
@@ -30,7 +42,7 @@ Page {
             //Sets one default item for test
             model: ListModel {
                 ListElement {
-                    name: "1"
+                    name: "TEST"
                     colorCode: "red"
                 }
             }
@@ -41,6 +53,7 @@ Page {
                 height: 50
                 Column {
                     Rectangle {
+
                         width: 50
                         height: 30
                         color: "red"
@@ -67,13 +80,22 @@ Page {
             cellHeight: 70
         }
 
+        //        Component.onCompleted: {
+        //            if(swipe.deletedItem !== "None"){
+        //                logGridView.model.append({name: swipe.deletedItem})
+        //                //swipe.deletedItem = "None"
+        //            }
+        //            itemsInRightPage = logGridView.count
+        //            console.log("Current: " + swipe.deletedItem)
+
+        //        }
         Component.onCompleted: {
-            if(swipe.deletedItem !== "None"){
-                logGridView.model.append({name: swipe.deletedItem})
-                swipe.deletedItem = "None"
+
+            //Sletter default
+            if(logGridView.model.get(0).name === "TEST"){
+                logGridView.model.remove(0)
             }
             itemsInRightPage = logGridView.count
-            console.log("Current: " + swipe.deletedItem)
         }
     }
 }
