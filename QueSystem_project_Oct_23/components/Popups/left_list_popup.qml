@@ -78,10 +78,6 @@ Item {
                         swipe.deletedItem = leftGridView.model.get(index).name
                         console.log("After: " +swipe.deletedItem)
 
-
-                        testChanged(leftGridView.model.get(index).name)
-
-
                         //Adds new Item to Right page grid
                         //swipe.itemAt(1).left_item_list.addNewItemToLeftGrid(swipe.deletedItem)
                         //GF.addItemToGrid(swipe.deletedItem,logGridView)

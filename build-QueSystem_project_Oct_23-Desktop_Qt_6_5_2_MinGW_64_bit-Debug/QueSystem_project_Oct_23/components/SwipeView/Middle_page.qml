@@ -3,22 +3,24 @@ import QtQuick.Window
 import QtQuick.Controls
 import QtQml
 import "../Popups"
+import "../../global_functions.js" as GF
 
 Page{
     id: middle_page
-
     //    This will crash the whole program.
     //    height:parent.height
     //    width:parent.width
 
-    function addNewItemLeftGrid(string){
-        leftGridView.model.append({name: string})
+    function addNewItemToLeftGrid(itemName){
+        leftGridView.model.append({name: itemName})
+        console.log(itemName)
+
     }
 
     //Left Item list
     Rectangle{
         id: left_item_list
-        color: "#399000"
+        color: "black"//"#399000"
         anchors.left: parent.left
         height: parent.height
         width: parent.width/3
@@ -122,13 +124,16 @@ Page{
                 }
             }
         }
+
         Component.onCompleted: {
             itemsInLeftGrid = leftGridView.count
             console.log("inGrid: " +swipe.deletedItem)
-
         }
 
+
     }
+
+
 
     //Middle Item list
     Rectangle{

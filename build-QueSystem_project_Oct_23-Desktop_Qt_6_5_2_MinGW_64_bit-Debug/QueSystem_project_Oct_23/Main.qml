@@ -18,6 +18,7 @@ Window {
     property int itemsInRightPage: 0
     property int itemsInGridsSum: itemsInLeftGrid + itemsInMiddleGrid + itemsInRightGrid + itemsInRightPage
 
+
     //Variables for adding new Item
     property int newItemNumber: itemsInGridsSum+1
 
@@ -31,8 +32,6 @@ Window {
         //Swipeview for swiping left and right between 3 pages
     SwipeView{
 
-
-
         id: swipe
         anchors.fill: parent
         //Sets current page ("startpage") to middle page
@@ -42,8 +41,6 @@ Window {
 
         //Left Page
         SW.Left_page{
-
-
             id: leftPage
 
 

@@ -6,6 +6,13 @@ import "../SwipeView" as SW
 
 Page {
 
+    //Imports the middle_page as a component with ID
+    Item{
+        SW.Middle_page{
+            id: mp
+        }
+    }
+
     Rectangle{
         //id: leftPageRec
         height:parent.height
@@ -56,7 +63,9 @@ Page {
 
                                 //SW.Middle_page.addItemLeftGrid(addButton.text.toString())
 
-                                SW.Middle_page.addNewItemLeftGrid("test")
+                                //SW.middle_page.addNewItemLeftGrid("test")
+
+                                mp.addNewItemToLeftGrid("test")
 
                                 updateGridNumbers(itemsInLeftGrid,itemsInMiddleGrid,itemsInRightGrid)
                             }
