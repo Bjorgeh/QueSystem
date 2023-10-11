@@ -7,9 +7,13 @@ import "../Popups"
 Page{
     id: middle_page
 
-//    This will crash the whole program.
-//    height:parent.height
-//    width:parent.width
+    //    This will crash the whole program.
+    //    height:parent.height
+    //    width:parent.width
+
+    function addNewItemLeftGrid(string){
+        leftGridView.model.append({name: string})
+    }
 
     //Left Item list
     Rectangle{
@@ -88,10 +92,10 @@ Page{
                                 radius: 50
                                 anchors.horizontalCenter: parent.horizontalCenter
 
-//                                Loader{
-//                                    anchors.fill: parent
-//                                    source: "left_list_popup.qml"
-//                                }
+                                //                                Loader{
+                                //                                    anchors.fill: parent
+                                //                                    source: "left_list_popup.qml"
+                                //                                }
 
                                 Left_list_popup{
                                     anchors.fill: parent
@@ -123,6 +127,7 @@ Page{
             console.log("inGrid: " +swipe.deletedItem)
 
         }
+
     }
 
     //Middle Item list
@@ -205,10 +210,10 @@ Page{
                                 radius: 50
                                 anchors.horizontalCenter: parent.horizontalCenter
 
-//                                Loader{
-//                                    anchors.fill: parent
-//                                    source: "middle_list_popup.qml"
-//                                }
+                                //                                Loader{
+                                //                                    anchors.fill: parent
+                                //                                    source: "middle_list_popup.qml"
+                                //                                }
                                 Middle_list_popup{
                                     anchors.fill: parent
                                 }
@@ -317,10 +322,10 @@ Page{
                                 color: "#37ff4a"
                                 radius: 50
                                 anchors.horizontalCenter: parent.horizontalCenter
-//                                Loader{
-//                                    anchors.fill: parent
-//                                    source: "right_list_popup.qml"
-//                                }
+                                //                                Loader{
+                                //                                    anchors.fill: parent
+                                //                                    source: "right_list_popup.qml"
+                                //                                }
                                 Right_list_popup{
                                     anchors.fill: parent
                                 }
@@ -350,3 +355,4 @@ Page{
         itemsInRightGrid = rightGridView.count
     }
 }
+

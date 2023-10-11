@@ -2,8 +2,11 @@ import QtQuick
 import QtQuick.Window
 import QtQuick.Controls
 import "../../global_functions.js" as GF
+import QtQml
 
 Page {
+
+
 
     Rectangle{
         anchors.fill: parent
@@ -41,6 +44,7 @@ Page {
                 height: 50
                 Column {
                     Rectangle {
+
                         width: 50
                         height: 30
                         color: "red"
@@ -74,6 +78,9 @@ Page {
             }
             itemsInRightPage = logGridView.count
             console.log("Current: " + swipe.deletedItem)
+
+
+
         }
     }
 }

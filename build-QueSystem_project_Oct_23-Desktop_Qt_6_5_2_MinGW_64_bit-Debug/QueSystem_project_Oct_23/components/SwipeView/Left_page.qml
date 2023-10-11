@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Window
 import QtQuick.Controls
 import "../../global_functions.js" as GF
+import "../SwipeView" as SW
 
 Page {
 
@@ -34,6 +35,7 @@ Page {
                         id: addLabel
                         text: "Add Nr: "
                     }
+
                     //Addbutton for new items
                         Button{
                             id: addButton
@@ -49,6 +51,12 @@ Page {
 
                                 //Does not work yet
                                 //swipe.middlePage.leftGridView.model.append({name: addButton.text})
+
+                                //Sets variabel to new item name
+
+                                //SW.Middle_page.addItemLeftGrid(addButton.text.toString())
+
+                                SW.Middle_page.addNewItemLeftGrid("test")
 
                                 updateGridNumbers(itemsInLeftGrid,itemsInMiddleGrid,itemsInRightGrid)
                             }

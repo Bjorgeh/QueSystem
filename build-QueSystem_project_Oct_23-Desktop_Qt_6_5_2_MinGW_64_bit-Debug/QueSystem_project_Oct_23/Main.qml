@@ -28,8 +28,11 @@ Window {
         itemsInRightGrid = r
     }
 
-    //Swipeview for swiping left and right between 3 pages
+        //Swipeview for swiping left and right between 3 pages
     SwipeView{
+
+
+
         id: swipe
         anchors.fill: parent
         //Sets current page ("startpage") to middle page
@@ -39,7 +42,10 @@ Window {
 
         //Left Page
         SW.Left_page{
+
+
             id: leftPage
+
 
             //            //Rectangle for background
             //            Rectangle {
@@ -68,6 +74,7 @@ Window {
         //Middle Page
         SW.Middle_page{
             id: middlePage
+
             //            //Rectangle for background
             //            Rectangle {
             //                id: itemRecMiddle

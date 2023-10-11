@@ -1,3 +1,4 @@
+
 //Adds item to grid
 function addItemToGrid(item,grid) {
     grid.model.append({name: item})
