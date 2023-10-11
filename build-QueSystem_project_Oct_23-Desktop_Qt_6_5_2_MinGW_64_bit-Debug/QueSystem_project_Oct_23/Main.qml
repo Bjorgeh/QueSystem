@@ -14,7 +14,6 @@ Window {
     //List for adding new items
     property list<string> newItemsList: []
 
-
     //Variabels for keeping track of items in grids
     property int itemsInLeftGrid: 0
     property int itemsInMiddleGrid: 0
@@ -22,6 +21,7 @@ Window {
     property int itemsInRightPage: 0
     property int itemsInGridsSum: itemsInLeftGrid + itemsInMiddleGrid + itemsInRightGrid + itemsInRightPage
 
+    //variabel for deleted item name - intermediate storage
     property string deletedItem: ""
 
     //Variables for adding new Item
@@ -34,7 +34,7 @@ Window {
         itemsInRightGrid = r
     }
 
-        //Swipeview for swiping left and right between 3 pages
+    //Swipeview for swiping left and right between 3 pages
     SwipeView{
         id: swipe
         anchors.fill: parent
@@ -43,8 +43,6 @@ Window {
 
         onCurrentIndexChanged: {
             middlePage.updateLeftGridView()
-            console.log("Swiped")
-            console.log(newItemsList)
             rightPage.addDeletedToRightPage()
         }
 
@@ -57,7 +55,6 @@ Window {
         //Middle Page
         SW.Middle_page{
             id: middlePage
-
         }
 
         //Right Page

@@ -9,9 +9,11 @@ Page {
     id: right_page
 
     function addDeletedToRightPage(){
+
         if(deletedItem.length > 0){
             logGridView.model.append({name: deletedItem})
             deletedItem = ""
+            swipe.currentIndex = 2
         }
     }
 

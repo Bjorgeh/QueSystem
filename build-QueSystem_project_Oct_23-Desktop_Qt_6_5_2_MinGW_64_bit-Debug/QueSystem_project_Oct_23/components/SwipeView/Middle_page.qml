@@ -92,6 +92,8 @@ Page{
                     delegate: Item {
                         x: 5
                         height: 50
+                        visible: index < 30
+
                         Column {
                             Rectangle {
                                 width: 50
@@ -127,7 +129,9 @@ Page{
                     }
                     cellWidth: 70
                     cellHeight: 70
+
                 }
+
             }
         }
 
@@ -201,6 +205,7 @@ Page{
                     anchors.rightMargin: 8
                     anchors.bottomMargin: 8
 
+
                     //Sets one default item for test
                     model: ListModel {
                         ListElement {
@@ -214,6 +219,7 @@ Page{
                     delegate: Item {
                         x: 5
                         height: 50
+                        visible: index < 30
                         Column {
                             Rectangle {
                                 width: 50
@@ -334,6 +340,7 @@ Page{
                     delegate: Item {
                         x: 5
                         height: 50
+                        visible: index < 30
                         Column {
                             Rectangle {
                                 width: 50

@@ -69,18 +69,21 @@ Item {
 
                 //Removes element from leftGridView
                 Button {
-
                     id: leftListDeleteButton
                     text: "Slett"
                     onClicked:{
 
-                        deletedItem = leftGridView.model.get(0).name
+
+
+                        deletedItem = leftGridView.model.get(index).name
                         //Removes item from left grid
                         GF.removeItem(index,leftGridView)
 
                         //Updates gridnumbers
                         updateGridNumbers(leftGridView.count,middleGridView.count,rightGridView.count)
 
+                        //Swipes to the item log page.
+                        swipe.currentIndex = 2
 
                     }
                 }
