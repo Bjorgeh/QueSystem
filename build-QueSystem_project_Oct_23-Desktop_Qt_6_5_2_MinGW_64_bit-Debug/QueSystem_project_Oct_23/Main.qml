@@ -7,12 +7,15 @@ import "./global_functions.js" as GF
 Window {
     id: root
     width: 940
-    height: 720
+    height: 800
     visible: true
     title: qsTr("QueSystem Oct 23")
 
     //List for adding new items
     property list<string> newItemsList: []
+
+    //List for deleting items
+    property list<string> oldItemsList: []
 
     //Variabels for keeping track of items in grids
     property int itemsInLeftGrid: 0
@@ -49,7 +52,6 @@ Window {
         //Left Page
         SW.Left_page{
             id: leftPage
-
         }
 
         //Middle Page
@@ -70,9 +72,7 @@ Window {
         interactive: true
         count: swipe.count
         currentIndex: swipe.currentIndex
-
         anchors.bottom: parent.bottom
         anchors.horizontalCenter: parent.horizontalCenter
     }
-
 }

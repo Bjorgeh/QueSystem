@@ -17,13 +17,17 @@ qt_add_qml_module(appQueSystem_project_Oct_23
     VERSION 1.0
     QML_FILES Main.qml
     QML_FILES background.qml
+
     QML_FILES global_functions.js
+
     QML_FILES Components/Popups/Left_list_popup.qml
     QML_FILES Components/Popups/Middle_list_popup.qml
     QML_FILES Components/Popups/Right_list_popup.qml
+
     QML_FILES Components/SwipeView/Left_page.qml
     QML_FILES Components/SwipeView/Middle_page.qml
     QML_FILES Components/SwipeView/Right_page.qml
+
 )
 
 
