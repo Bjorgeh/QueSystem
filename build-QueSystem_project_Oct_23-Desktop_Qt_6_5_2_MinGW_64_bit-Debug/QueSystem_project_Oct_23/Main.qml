@@ -6,7 +6,7 @@ import "./global_functions.js" as GF
 
 Window {
     id: root
-    width: 940
+    width: 1200
     height: 800
     visible: true
     title: qsTr("QueSystem Oct 23")
