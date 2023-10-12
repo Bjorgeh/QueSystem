@@ -41,7 +41,7 @@ Item {
                         //Removes element from middleGridView
                         middleGridView.model.remove(index)
                         //Updates gridnumbers
-                        updateGridNumbers(leftGridView.count,middleGridView.count,rightGridView.count)
+                        updateGridNumbers(leftGridView.count,middleGridView.count,itemsInRightGrid)
 
                     }
                 }
@@ -52,14 +52,17 @@ Item {
                         //Sets property variabel to new item name
                         deletedItem = middleGridView.model.get(index).name
 
+                        //Adds added items to list
+                        oldItemsList.push(deletedItem)
+
                         //Removes from middle grid
                         middleGridView.model.remove(index)
 
                         //Updates gridnumbers
-                        updateGridNumbers(leftGridView.count,middleGridView.count,rightGridView.count)
+                        updateGridNumbers(leftGridView.count,middleGridView.count,itemsInRightGrid)
 
                         //Swipes to the item log page.
-                        swipe.currentIndex = 2
+                        //swipe.currentIndex = 2
                     }
                 }
             }

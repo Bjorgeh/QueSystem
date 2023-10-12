@@ -11,8 +11,8 @@ Item {
                        onClicked: popup_r.open()
                        //Finds element position in gridview via mouseinteraction
                        let posInGridView = Qt.point(mouse.x, mouse.y)
-                       let posInContentItem = mapToItem(rightGridView.contentItem, posInGridView)
-                       let index = rightGridView.indexAt(posInContentItem.x, posInContentItem.y)
+                       let posInContentItem = mapToItem(kasse.contentItem, posInGridView)
+                       let index = kasse.indexAt(posInContentItem.x, posInContentItem.y)
                        console.log(index)
                    }
     }
@@ -37,16 +37,19 @@ Item {
                     text: "Slett"
                     onClicked:{
                         //Sets property variabel to new item name
-                        deletedItem = rightGridView.model.get(index).name
+                        deletedItem = kasse.model.get(index).name
+
+                        //Adds added items to list
+                        oldItemsList.push(deletedItem)
 
                         //Removes from middle grid
-                        rightGridView.model.remove(index);
+                        kasse.model.remove(index);
 
                         //Updates gridnumbers
-                        updateGridNumbers(leftGridView.count,middleGridView.count,rightGridView.count)
+                        updateGridNumbers(leftGridView.count,middleGridView.count,itemsInRightGrid)
 
                         //Swipes to the item log page.
-                        swipe.currentIndex = 2
+                        //swipe.currentIndex = 2
                     }
                 }
             }

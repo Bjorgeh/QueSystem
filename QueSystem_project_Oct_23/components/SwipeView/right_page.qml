@@ -5,21 +5,20 @@ import "../../global_functions.js" as GF
 import QtQml
 
 Page {
-
     id: right_page
-
+    //Adds new item to logGrid
     function addDeletedToRightPage(){
-
-        if(deletedItem.length > 0){
-            logGridView.model.append({name: deletedItem})
-            deletedItem = ""
-            swipe.currentIndex = 2
+        for(let i = 0; i < oldItemsList.length; i ++){
+            GF.addItemToGrid(oldItemsList[i],logGridView)
+            console.log("Updated logGrid: " + oldItemsList[i])
         }
+        //Empties list
+        oldItemsList = []
     }
 
     Rectangle{
         anchors.fill: parent
-        color: "green"
+        color: "#e5edf0"//"green"
 
         Rectangle{
             id: topLogo
@@ -27,6 +26,7 @@ Page {
             x: parent.width /2
 
             Label{
+                id: rightPageLabel
                 text: "Item Log"
             }
         }
@@ -37,7 +37,7 @@ Page {
             anchors.topMargin: 8
             anchors.rightMargin: 8
             anchors.bottomMargin: 8
-            anchors.top: topLogo.bottom
+            anchors.top: rightPageLabel.bottom
 
             //Sets one default item for test
             model: ListModel {

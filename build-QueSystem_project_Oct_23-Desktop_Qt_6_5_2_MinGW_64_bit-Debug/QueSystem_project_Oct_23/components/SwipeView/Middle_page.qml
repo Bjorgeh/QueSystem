@@ -17,18 +17,19 @@ Page{
     function updateLeftGridView(){
         for(let i = 0;i< newItemsList.length; i++ ){
             GF.addItemToGrid(newItemsList[i],leftGridView)
-            console.log("Left Grid up to date.")
+            console.log("Updated leftGrid: " + newItemsList[i])
         }
+        //Empties list
         newItemsList = []
     }
 
     //Left Item list
     Rectangle{
         id: left_item_list
-        color: "#399000"
+        color: "#e5edf0" //"#399000"
         anchors.left: parent.left
         height: parent.height
-        width: parent.width/3
+        width: parent.width/4
         //Makes rectangle with text
         Rectangle{
             id: left_display_name
@@ -46,7 +47,7 @@ Page{
             //Displays text centered in parent rectangle
             Text {
                 id: ldn
-                text: qsTr("Pågår")
+                text: qsTr("\nPågår")
                 anchors.centerIn: parent
             }
             //Rectangle for Queued items
@@ -96,16 +97,11 @@ Page{
 
                         Column {
                             Rectangle {
-                                width: 50
-                                height: 30
+                                width: leftGridView.width/5//50
+                                height: leftGridView.height/30//30
                                 color: "gray"
                                 radius: 50
                                 anchors.horizontalCenter: parent.horizontalCenter
-
-                                //                                Loader{
-                                //                                    anchors.fill: parent
-                                //                                    source: "left_list_popup.qml"
-                                //                                }
 
                                 Left_list_popup{
                                     anchors.fill: parent
@@ -127,21 +123,57 @@ Page{
                             spacing: 5
                         }
                     }
-                    cellWidth: 70
+                    cellWidth: 92
                     cellHeight: 70
 
                 }
 
+                //Recangle for showing message if more than 30 items in gridview
+                Rectangle {
+                    id: moreItemsInLeftGridView
+                    width: parent.width
+                    height: parent.height/8
+                    color: "gray"
+                    anchors.bottom: parent.bottom
+                    //Visible if over 30 items im gridView
+                    visible: leftGridView.count > 30 ? 1 : 0
+                    Label{
+                        anchors.centerIn: parent
+                        text: "Mer enn 30"
+                    }
+
+                    //Animates blinking for moreItemsInLeftGrid
+                    SequentialAnimation {
+                        running: true
+                        loops: Animation.Infinite
+
+                        PropertyAnimation {
+                            target: moreItemsInLeftGridView
+                            property: "opacity"
+                            from: 1
+                            to: 0
+                            duration: 500
+                        }
+
+                        PropertyAnimation {
+                            target: moreItemsInLeftGridView
+                            property: "opacity"
+                            from: 0
+                            to: 1
+                            duration: 500
+                        }
+                    }
+                }
             }
         }
 
+        //Runs when parent complete
         Component.onCompleted: {
 
             //Sletter default
             if(leftGridView.model.get(0).name === "TEST"){
                 leftGridView.model.remove(0)
             }
-
             itemsInLeftGrid = leftGridView.count
         }
     }
@@ -149,10 +181,10 @@ Page{
     //Middle Item list
     Rectangle{
         id: middle_item_list
-        color: "#41a400"
+        color: "#e5edf0"//"#41a400"
         anchors.left: left_item_list.right
         height: parent.height
-        width: parent.width/3
+        width: parent.width/4
 
         //Makes rectangle with text
         Rectangle{
@@ -171,7 +203,7 @@ Page{
             //Displays text centered in parent rectangle
             Text {
                 id: mdn
-                text: qsTr("Under bearbeidelse")
+                text: qsTr("\nUnder bearbeidelse")
                 anchors.centerIn: parent
             }
 
@@ -222,16 +254,12 @@ Page{
                         visible: index < 30
                         Column {
                             Rectangle {
-                                width: 50
-                                height: 30
+                                width: middleGridView.width/4//50
+                                height: middleGridView.height/30//30
                                 color: "yellow"
                                 radius: 50
                                 anchors.horizontalCenter: parent.horizontalCenter
 
-                                //                                Loader{
-                                //                                    anchors.fill: parent
-                                //                                    source: "middle_list_popup.qml"
-                                //                                }
                                 Middle_list_popup{
                                     anchors.fill: parent
                                 }
@@ -251,11 +279,48 @@ Page{
                             spacing: 5
                         }
                     }
-                    cellWidth: 70
+                    cellWidth: 92
                     cellHeight: 70
+                }
+                //Recangle for showing message if more than 30 items in gridview
+                Rectangle {
+                    id: moreItemsInMiddleGridView
+                    width: parent.width
+                    height: parent.height/8
+                    color: "gray"
+                    anchors.bottom: parent.bottom
+                    //Visible if over 30 items im gridView
+                    visible: middleGridView.count > 30 ? 1 : 0
+                    Label{
+                        anchors.centerIn: parent
+                        text: "Mer enn 30"
+                    }
+
+                    //Animates blinking for moreItemsInMiddleGrid
+                    SequentialAnimation {
+                        running: true
+                        loops: Animation.Infinite
+
+                        PropertyAnimation {
+                            target: moreItemsInMiddleGridView
+                            property: "opacity"
+                            from: 1
+                            to: 0
+                            duration: 500
+                        }
+
+                        PropertyAnimation {
+                            target: moreItemsInMiddleGridView
+                            property: "opacity"
+                            from: 0
+                            to: 1
+                            duration: 500
+                        }
+                    }
                 }
             }
         }
+        //Runs when parent complete
         Component.onCompleted: {
 
 
@@ -268,13 +333,14 @@ Page{
         }
     }
 
+
     //Right Item list
     Rectangle{
         id: right_item_list
-        color: "#4ec500"
+        color: "#e5edf0"//"#4ec500"
         anchors.left: middle_item_list.right
         height: parent.height
-        width: parent.width/3
+        width: parent.width/4
 
         //Makes rectangle with text
         Rectangle{
@@ -293,7 +359,7 @@ Page{
             //Displays text centered in parent rectangle
             Text {
                 id: rdn
-                text: qsTr("Klar")
+                text: qsTr("\n Klar\nkasse 1")
                 anchors.centerIn: parent
             }
 
@@ -304,7 +370,7 @@ Page{
                 width: parent.width
                 height: right_item_list.height - right_display_name.height
                 //color: background.color
-                color: "#4ec500"
+                color: "#e5edf0"//"#4ec500"
 
                 //variabel for hovered: true false
                 property bool isHovered_right: false
@@ -343,17 +409,15 @@ Page{
                         visible: index < 30
                         Column {
                             Rectangle {
-                                width: 50
-                                height: 30
+                                width: rightGridView.width/4//50
+                                height: rightGridView.height/30//30
                                 color: "#37ff4a"
                                 radius: 50
                                 anchors.horizontalCenter: parent.horizontalCenter
-                                //                                Loader{
-                                //                                    anchors.fill: parent
-                                //                                    source: "right_list_popup.qml"
-                                //                                }
+
                                 Right_list_popup{
                                     anchors.fill: parent
+                                    property GridView kasse: rightGridView
                                 }
                                 Text {
                                     //id: objName
@@ -371,12 +435,49 @@ Page{
                             spacing: 5
                         }
                     }
-                    cellWidth: 70
+                    cellWidth: 92
                     cellHeight: 70
+                }
+                //Recangle for showing message if more than 30 items in gridview
+                Rectangle {
+                    id: moreItemsInRightGridView
+                    width: parent.width
+                    height: parent.height/8
+                    color: "gray"
+                    anchors.bottom: parent.bottom
+                    //Visible if over 30 items im gridView
+                    visible: rightGridView.count > 30 ? 1 : 0
+                    Label{
+                        anchors.centerIn: parent
+                        text: "Mer enn 30"
+                    }
+
+                    //Animates blinking for moreItemsInrightGrid
+                    SequentialAnimation {
+                        running: true
+                        loops: Animation.Infinite
+
+                        PropertyAnimation {
+                            target: moreItemsInRightGridView
+                            property: "opacity"
+                            from: 1
+                            to: 0
+                            duration: 500
+                        }
+
+                        PropertyAnimation {
+                            target: moreItemsInRightGridView
+                            property: "opacity"
+                            from: 0
+                            to: 1
+                            duration: 500
+                        }
+                    }
                 }
             }
         }
     }
+    //Runs when parent complete
     Component.onCompleted: {
 
         //Sletter default
@@ -387,5 +488,163 @@ Page{
         itemsInRightGrid = rightGridView.count
     }
 
+    //Right Item list
+    Rectangle{
+        id: right_item_list_2
+        color: "#e5edf0"//"#4ec500"
+        anchors.left: right_item_list.right
+        height: parent.height
+        width: parent.width/4
+
+        //Makes rectangle with text
+        Rectangle{
+            id: right_display_name_2
+            anchors.top: parent.top
+            height: parent.height/8
+            width: parent.width
+            //color: "blue"
+            gradient: Gradient {
+                GradientStop { position: 0.0; color: right_item_list.color }
+                GradientStop { position: 0.6; color: right_item_list.color }
+                GradientStop { position: 1.0; color: "#37ff4a" }
+            }
+            radius: 50
+
+            //Displays text centered in parent rectangle
+            Text {
+                id: rdn_2
+                text: qsTr("\n Klar\nkasse 2")
+                anchors.centerIn: parent
+            }
+
+            //Rectangle for ready items
+            Rectangle{
+                id: right_list_2
+                anchors.top: right_display_name_2.bottom
+                width: parent.width
+                height: right_item_list_2.height - right_display_name_2.height
+                //color: background.color
+                color: "#e5edf0"//"#4ec500"
+
+                //variabel for hovered: true false
+                property bool isHovered_right: false
+                border.color: isHovered_right ? "gray" : right_item_list_2.color
+
+                //Sets mousearea to the whole parent rectangle
+                MouseArea{
+                    anchors.fill: parent
+                    hoverEnabled: true
+                    //sets variabel to true or false dependig on the mouse position
+                    onEntered: right_list_2.isHovered_right = true
+                    onExited: right_list_2.isHovered_right = false
+                }
+
+                // right Grid with list items
+                GridView {
+                    id: rightGridView_2
+                    anchors.fill: parent
+                    anchors.rightMargin: 8
+                    anchors.bottomMargin: 8
+                    anchors.leftMargin: 8
+                    anchors.topMargin: 8
+
+                    //Sets one default item for test
+                    model: ListModel {
+                        ListElement {
+                            name: "TEST"
+                            colorCode: "green"
+                        }
+                    }
+
+                    //Sets up item blueprint
+                    delegate: Item {
+                        x: 5
+                        height: 50
+                        visible: index < 30
+                        Column {
+                            Rectangle {
+                                width: rightGridView_2.width/4//50
+                                height: rightGridView_2.height/30//30
+                                color: "#37ff4a"
+                                radius: 50
+                                anchors.horizontalCenter: parent.horizontalCenter
+
+                                Right_list_popup{
+                                    anchors.fill: parent
+                                    property GridView kasse: rightGridView_2
+                                }
+
+                                Text {
+                                    //id: objName
+                                    text: qsTr(name)
+                                    anchors.centerIn: parent
+                                }
+                            }
+
+                            Text {
+                                x: 5
+                                //text: name
+                                font.bold: true
+                                anchors.horizontalCenter: parent.horizontalCenter
+                            }
+                            spacing: 5
+
+                        }
+                    }
+                    cellWidth: 92
+                    cellHeight: 70
+
+
+                }
+                //Recangle for showing message if more than 30 items in gridview
+                Rectangle {
+                    id: moreItemsInRightGridView_2
+                    width: parent.width
+                    height: parent.height/8
+                    color: "gray"
+                    anchors.bottom: parent.bottom
+                    //Visible if over 30 items im gridView
+                    visible: rightGridView_2.count > 30 ? 1 : 0
+                    Label{
+                        anchors.centerIn: parent
+                        text: "Mer enn 30"
+                    }
+
+                    //Animates blinking for moreItemsInRightGridView_2
+                    SequentialAnimation {
+                        running: true
+                        loops: Animation.Infinite
+
+                        PropertyAnimation {
+                            target: moreItemsInRightGridView_2
+                            property: "opacity"
+                            from: 1
+                            to: 0
+                            duration: 500
+                        }
+
+                        PropertyAnimation {
+                            target: moreItemsInRightGridView_2
+                            property: "opacity"
+                            from: 0
+                            to: 1
+                            duration: 500
+                        }
+                    }
+                }
+            }
+        }
+
+        //Runs when parent complete
+        Component.onCompleted: {
+
+            //Sletter default
+            if(rightGridView_2.model.get(0).name === "TEST"){
+                rightGridView_2.model.remove(0)
+            }
+
+            itemsInRightGrid = rightGridView_2.count + rightGridView.count
+        }
+    }
 }
 

@@ -47,7 +47,7 @@ Item {
                         GF.removeItem(index, leftGridView)
 
                         //Updates gridnumbers
-                        updateGridNumbers(leftGridView.count,middleGridView.count,rightGridView.count)
+                        updateGridNumbers(leftGridView.count,middleGridView.count,itemsInRightGrid)
                     }
                 }
 
@@ -63,7 +63,23 @@ Item {
                         GF.removeItem(index, leftGridView)
 
                         //Updates gridnumbers
-                        updateGridNumbers(leftGridView.count,middleGridView.count,rightGridView.count)
+                        updateGridNumbers(leftGridView.count,middleGridView.count,itemsInRightGrid)
+                    }
+
+                }
+                //moves element to rightGridView
+                Button { text: "Flytt til 'Klar 2'"
+                    onClicked: {
+                        //Adds element to rightgridview
+                        //rightGridView.model.append({name: leftGridView.model.get(index).name});
+                        GF.addItemToGrid(leftGridView.model.get(index).name,rightGridView_2)
+
+                        //Removes element from leftGridView
+                        //leftGridView.model.remove(index)
+                        GF.removeItem(index, leftGridView)
+
+                        //Updates gridnumbers
+                        updateGridNumbers(leftGridView.count,middleGridView.count,itemsInRightGrid)
                     }
                 }
 
@@ -73,17 +89,19 @@ Item {
                     text: "Slett"
                     onClicked:{
 
-
-
                         deletedItem = leftGridView.model.get(index).name
+
+                        //Adds added items to list
+                        oldItemsList.push(deletedItem)
+
                         //Removes item from left grid
                         GF.removeItem(index,leftGridView)
 
                         //Updates gridnumbers
-                        updateGridNumbers(leftGridView.count,middleGridView.count,rightGridView.count)
+                        updateGridNumbers(leftGridView.count,middleGridView.count,itemsInRightGrid)
 
                         //Swipes to the item log page.
-                        swipe.currentIndex = 2
+                        //swipe.currentIndex = 2
 
                     }
                 }

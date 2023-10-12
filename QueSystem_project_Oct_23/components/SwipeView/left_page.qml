@@ -54,6 +54,7 @@ Page {
                                 for(let i=0;i < newItemsList.length;i++){
                                     console.log(newItemsList[i])
                                 }
+
                                 newItemNumber++
                                 //updates gridnumbers
                                 updateGridNumbers(itemsInLeftGrid,itemsInMiddleGrid,itemsInRightGrid)
