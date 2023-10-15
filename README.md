@@ -5,3 +5,6 @@
 4. numbers are movable from left to right grid and so on, all the way to the log grid on the right page.
 5. If number of numbers in a grid gets lager than 30, a message will blink in the grid.
 6. A grid will not show more than 30 numbers at a time.
+
+The program is mainly written in QML and also have some javaScript functions and variabels. 
+Version of Qt: 11.0.3
