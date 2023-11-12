@@ -1,10 +1,51 @@
 # QueSystem by Bjorgeh
-1. School project for Fagskolen i Viken - Class Programmering 2020-2024
-2. This project is made for an assignment from the school, it`s a queuesystem for numbers(orders). 
-3. Slide to the left page to add numbers to the first grid on the middle page, if number deleted, it will be saved in the right page.
-4. numbers are movable from left to right grid and so on, all the way to the log grid on the right page.
-5. If number of numbers in a grid gets lager than 30, a message will blink in the grid.
-6. A grid will not show more than 30 numbers at a time.
 
-The program is mainly written in QML and also have some javaScript functions and variabels. 
-Version of Qt: 11.0.3
+**School Project for Fagskolen i Viken - Class Programmering 2020-2024**
+
+## Introduction
+
+QueSystem is a dynamic queue management system designed as a school project for Fagskolen i Viken. It effectively manages numerical orders in a visually intuitive and interactive manner.
+
+## Features
+
+- **Interactive Grids:** Easily add numbers to the queue by sliding to the left page. The first grid on the middle page displays the current numbers in the queue.
+- **Log Management:** Deleted numbers are not lost; they are archived in the right page for easy tracking.
+- **Drag-and-Drop Functionality:** Numbers are seamlessly movable across grids, from left to right, all the way to the log grid on the right page.
+- **Capacity Management:** When a grid exceeds 30 numbers, a blinking message alerts the user. Each grid is capped at displaying 30 numbers at a time for clarity.
+
+## Technologies Used
+
+- **QML:** The core programming language for the project, offering a rich visual framework.
+- **JavaScript:** Used for additional functions and variable management, enhancing the interactivity of the system.
+- **Qt Version:** The project is developed using Qt 11.0.3, ensuring a modern and robust foundation.
+
+## Installation
+
+(Provide a step-by-step guide on how to install and set up your project.)
+
+```bash
+# Clone the repository
+git clone [[URL-to-your-repo]](https://github.com/Bjorgeh/QueSystem)
+
+# Navigate to the project directory
+cd QueSystem
+
+# Instructions to build/run the project
+...
+```
+
+## Usage
+
+--------
+
+## Contributing
+
+Contributions to the QueSystem project are welcome. Please read `CONTRIBUTING.md` for details on our code of conduct and the process for submitting pull requests.
+
+## License
+
+This project is licensed under any "QT-Free" License
+
+## Acknowledgments
+
+- Fagskolen i Viken and the programming class of 2020-2024 for the opportunity and support in developing this project.
